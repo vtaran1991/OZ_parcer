@@ -45,15 +45,6 @@ for pageNum in range(1, int(pagination)):
     pageUrl = ('https://oz.by/books/?availability=1;2;3&page=' + str(pageNum))
     finalBookList.extend(infoScrapper(pageUrl))
 
-# Информация из списка записывается в таблицу
-
-# Сохраняем список книг в файл txt
-# txtFile = open('N_A from OZ at ' + str(datetime.datetime.now()) + '.txt', 'w')
-# for q in range(len(finalBookList)):
-#     txtFile.write(str(finalBookList[q]))
-# txtFile.close()
-
-
 # Сохраняем список книг в файл csv
 with open('ALLINONE.csv', 'w') as csvFile:
     csvEditor = csv.writer(csvFile, delimiter=',', quotechar='"')
